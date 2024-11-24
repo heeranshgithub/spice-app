@@ -64,6 +64,7 @@ export default function CertificateGallery({ certificates }) {
                     src={certificate.imageSrc}
                     alt={certificate.title}
                     fill
+                    sizes="(max-width: 768px) 50vw"
                     className="object-cover"
                     priority={index < 2} // Prioritize loading first 2 images
                   />
@@ -73,7 +74,7 @@ export default function CertificateGallery({ certificates }) {
           </div>
         </div>
 
-        {/* Desktop Certificates Grid (4 items) */}
+        {/* Desktop Certificates Grid (5 items) */}
         <div className="hidden md:block">
           <div className="grid grid-cols-5 gap-6">
             {getVisibleCertificates(itemsPerPage.desktop).map(
@@ -86,6 +87,7 @@ export default function CertificateGallery({ certificates }) {
                     src={certificate.imageSrc}
                     alt={certificate.title}
                     fill
+                    sizes="(min-width: 768px) 20vw"
                     className="object-fit"
                     priority={index < 4} // Prioritize loading first 4 images
                   />

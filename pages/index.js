@@ -10,6 +10,7 @@ import achievementsListArr from "../public/assets/achievementsList.mjs"
 import CertificateGallery from "../components/CertificateGallery"
 import AchievementsGallery from "../components/AchievementsGallery"
 import ProductsSection from "../components/ProductsSections"
+import Footer from "../components/Footer"
 
 export default function Home() {
   return (
@@ -58,6 +59,10 @@ export default function Home() {
 
       <div>
         <AchievementsGallery achievements={achievementsListArr} />
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </div>
   )
